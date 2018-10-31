@@ -1,0 +1,105 @@
+html {
+    font-family: 'Lucida Sans', sans-serif
+}
+
+div {
+  display: flex;
+}
+
+body {
+  background: black;
+}
+
+#wrapper {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  background: gray;
+  min-height: 600px;
+  min-width: 800px;
+  height: 80%;
+  width: 80%;
+  justify-content: center;
+  align-items: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  text-align: justify;
+  text-justify: distribute;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+form * {
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+input {
+  margin-left: 20px;
+}
+
+#meme {
+  flex-direction: column;
+  background-image: url('kappa.png');
+  background-size: cover;
+  height: 600px;
+  width: 800px;
+  border-style: solid;
+  border-color: black;
+  margin-top: 20px;
+  flex-shrink: 0;
+  flex-grow: 0;
+}
+
+#spacer {
+  height: 60%;
+}
+
+.memeText {
+  height: 35%;
+  width: 94%;
+  margin-left: 3%;
+  margin-right: 3%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+
+.memeText#bottom {
+    align-items: flex-end;
+}
+
+.memeText p {
+  font-family: Impact;
+  color: white;
+  text-align: center;
+  text-shadow: 1px 1px 0 #000,
+    -1px 1px 0 #000,
+    1px -1px 0 #000,
+    -1px -1px 0 #000,
+    0px 1px 0 #000,
+    0px -1px 0 #000,
+    -1px 0px 0 #000,
+    1px 0px 0 #000,
+    2px 2px 0 #000,
+    -2px 2px 0 #000,
+    2px -2px 0 #000,
+    -2px -2px 0 #000,
+    0px 2px 0 #000,
+    0px -2px 0 #000,
+    -2px 0px 0 #000,
+    2px 0px 0 #000,
+    1px 2px 0 #000,
+    -1px 2px 0 #000,
+    1px -2px 0 #000,
+    -1px -2px 0 #000,
+    2px 1px 0 #000,
+    -2px 1px 0 #000,
+    2px -1px 0 #000,
+    -2px -1px 0 #000;
+  margin: 0 auto;
+  font-size: 500%;
+}

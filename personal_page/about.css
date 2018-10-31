@@ -15,3 +15,12 @@ img {
     text-align: center;
     width: 80%;
 }
+
+a {
+    transition: color .5s, font-weight, .5s
+}
+
+a:hover {
+    color: blue;
+    font-weight: bold;
+}

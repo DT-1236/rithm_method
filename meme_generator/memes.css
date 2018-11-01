@@ -17,11 +17,12 @@ body {
   background: gray;
   min-height: 600px;
   min-width: 800px;
-  height: 80%;
   width: 80%;
   justify-content: center;
   align-items: center;
-}
+  left: 50%;
+  margin-left: -37.5%;
+  }
 
 form {
   display: flex;

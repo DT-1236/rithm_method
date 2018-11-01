@@ -1,0 +1,73 @@
+
+div {
+  display: flex;
+}
+
+#wrapper {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: orange;
+}
+
+#surface {
+  flex-wrap: wrap;
+  background: brown;
+  position: absolute;
+  align-items: center;
+  justify-content: space-around;
+  left: 50%;
+  margin-left: -35%;
+  width: 70%;
+  height: 90%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+[class^='card'] {
+  flex: 0 0 0%;
+  position: relative;
+  background: blue;
+  margin: 2px;
+  min-width: 200px;
+  min-height: 200px;
+  max-height: 200px;
+  max-height: 200px;
+}
+
+.front {
+  position: absolute;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
+}
+
+.back {
+  position: absolute;
+  opacity: 1;
+  z-index: 10;
+  background: purple;
+  height: 100%;
+  width: 100%;
+  transition: opacity .5s;
+}
+
+.topNum, .botNum {
+  background: green;
+  height: 30%;
+  width: 30%;
+  margin: 2%;
+  align-items: center;
+  justify-content: center;
+}
+
+.botNum {
+  align-self: flex-end;
+  text-align: center;
+}
+
+.topNum {
+  align-self: flex-start;
+}

@@ -1,19 +1,3 @@
-/*
-function shuffle(arr) {
-    let currentIndex = arr.length;
-    let newIndex, currentValue;
-
-    while (currentIndex > 0) {
-        newIndex = Math.floor(Math.random() * currentIndex--);
-        currentValue = arr[currentIndex];
-        arr[currentIndex] = arr[newIndex];
-        arr[newIndex] = currentValue;
-    }
-
-    return arr;
-}
-*/
-
 function createCard(cardNumber) {
     let card = document.createElement('div');
     let front = document.createElement('div');
@@ -35,6 +19,7 @@ function createCard(cardNumber) {
 
     front.appendChild(topNum);
     front.appendChild(botNum);
+
     card.appendChild(front);
     card.appendChild(back);
 
@@ -76,43 +61,40 @@ function removeDeck() {
     }
 }
 
-function revealCard(cardBack, selected) {
-    if (cardBack.style.opacity === 1) {
-        cardback.style.opacity = 0;
-        selected.push(cardBack);
+function disableClicks(ms) {
+    document.addEventListener("click", disableClicks, true);
+    function disableClicks(event){
+        event.stopPropagation();
+        event.preventDefault();
     }
 
-    return selected;
+    setTimeout(function() {
+        document.removeEventListener('click', disableClicks, true);
+    }, ms);
 }
 
-function selectionFailure() {
-    // Disables clicks for 1.5 seconds
-    document.addEventListener("click", clicker, true);
-    function clicker(e){
-        e.stopPropagation();
-        e.preventDefault();
-    }
-
-    setTimeout(function() {document.removeEventListener('click', clicker, true);}, 1500);
+function flipSelectedCards(selected) {
+    setTimeout(function() {
+        selected.forEach(function(cardBack) {
+            cardBack.style.opacity = 1;
+        });
+    }, 1500);        
 }
 
 function checkSuccess(selected) {
+    let firstClass = selected[0].parentElement.className;
     return selected.every(function(cardBack) {
-        return cardBack.parentElement.className === selected[0].parentElement.className;
+        return cardBack.parentElement.className === firstClass;
     });
 }
 
 function resolveSelected(selected, revealed) {
-    if (!checkSuccess(selected)) {
-        selectionFailure();
-        setTimeout(function() {
-            selected.forEach(function(cardBack) {
-                cardBack.style.opacity = 1;
-            });
-        }, 1500);
-        
-    } else {
+    if (checkSuccess(selected)) {
         revealed += selected.length;
+
+    } else {
+        disableClicks(1500);
+        flipSelectedCards(selected);
     }
 
     return revealed;
@@ -148,14 +130,13 @@ function playGame(sets, setSize) {
         if (selected.length === setSize) {
             revealed = resolveSelected(selected, revealed);
             selected = [];
-
         }
 
         if (revealed === sets * setSize) {
+            revealed = 0;
             victory(clicks);
         }
     });
 }
 
 console.log('Scripts loaded');
-// document.getElementById("myElement").onclick = function() { return false; } 

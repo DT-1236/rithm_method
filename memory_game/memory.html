@@ -9,13 +9,64 @@
     <script src='memory.js'></script>
 </head>
 <body>
-  <div id='wrapper'>
-    <div id='intro'>
-
+  <div id="counter">0</div>
+  <div id='menu'>
+    <div id='scoreHeading'><p>Best Score</p></div>
+    <div id='score'><p></p></div>
+    <div>
+      <form action=''>
+        <label for="totalSets">Total Sets : </label>
+        <select name="totalSets" id="totalSets">
+          <option value="02">02</option>
+          <option value="03">03</option>
+          <option value="04">04</option>
+          <option value="05">05</option>
+          <option value="06">06</option>
+          <option value="07">07</option>
+          <option value="08">08</option>
+          <option value="09">09</option>
+          <option value="10">10</option>
+          <option value="11">11</option>
+          <option value="12">12</option>
+          <option value="13">13</option>
+          <option value="14">14</option>
+          <option value="15">15</option>
+          <option value="16">16</option>
+          <option value="17">17</option>
+          <option value="18">18</option>
+          <option value="19">19</option>
+          <option value="20">20</option>
+        </select>
+        <label for="setSize">Set Size : </label>
+        <select name="setSize" id="setSize">
+          <option value="02">02 Cards</option>
+          <option value="03">03 Cards</option>
+          <option value="04">04 Cards</option>
+          <option value="05">05 Cards</option>
+          <option value="06">06 Cards</option>
+          <option value="07">07 Cards</option>
+          <option value="08">08 Cards</option>
+          <option value="09">09 Cards</option>
+          <option value="10">10 Cards</option>
+          <option value="11">11 Cards</option>
+          <option value="12">12 Cards</option>
+          <option value="13">13 Cards</option>
+          <option value="14">14 Cards</option>
+          <option value="15">15 Cards</option>
+          <option value="16">16 Cards</option>
+          <option value="17">17 Cards</option>
+          <option value="18">18 Cards</option>
+          <option value="19">19 Cards</option>
+          <option value="20">20 Cards</option>
+    
+        </select>
+        <button type='button'>Let's Go!</button>
+      </form>
     </div>
-    <div id='game'>
+  </div>
+  <div id="container">
+    <div id='wrapper'>
       <div id='surface'>
-
         <div class="card">
           <div class="front"></div>
             <div class="topNum">topNum</div>
@@ -99,10 +150,8 @@
             <div class="botNum">botNum</div>
           <div class="back"></div>
         </div>
-  
       </div>
-    </div>
+
   </div>
 </body>
 </html>
-

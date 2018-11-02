@@ -168,6 +168,7 @@ function playGame(sets, setSize) {
             victory(clicks)
             document.getElementById('counter').innerText = 0;
             localStorage.setItem(sets + '_' + setSize, clicks);
+            document.querySelector('#score p').innerText = "Select Mode";
             surface.removeEventListener('click', clickHandler);
         }
     });

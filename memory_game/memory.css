@@ -15,6 +15,10 @@ div {
   height: 20px;
   width: 30px;
   z-index: 20;
+  border-style: solid;
+  border-color: white;
+  padding-left: 3px;
+
 }
 
 #menu {
@@ -55,6 +59,8 @@ div {
   position: absolute;
   width: 100%;
   padding-top: 75%;
+  top: 12.5%;
+  left: 12.5%;
 }
 
 #surface {
@@ -72,6 +78,8 @@ div {
 [class^='card'] {
   position: relative;
   margin: 2px;
+  justify-content: center;
+  align-items: center;
 }
 
 .front {
@@ -79,8 +87,8 @@ div {
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  height: 100%;
-  width: 100%;
+  height: 95%;
+  width: 95%;
 }
 
 .back {

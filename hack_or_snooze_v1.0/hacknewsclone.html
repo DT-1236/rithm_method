@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Hackernews</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+    crossorigin="anonymous">
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+    crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="custom-style.css">
+
+  <script src="script.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <nav class="navbar navbar-expand-lg mt-2">
+      <a class="navbar-brand font-weight-bold" href="#">Hack or Snooze</a>
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link nav-submit" href="#">submit</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link nav-fav" href="#">favorites</a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="wrapper" id="slideup">
+      <div class="form mt-2">
+        <form class="ml-2">
+          <div class="form-group row">
+            <label for="inputTitle" class="col-sm-1 col-form-label">title</label>
+            <div class="col-sm-5">
+              <input type="text" class="form-control" id="inputTitle" required>
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label for="inputUrl" class="col-sm-1 col-form-label">url</label>
+            <div class="col-sm-5">
+              <input type="url" class="form-control" id="inputUrl" required>
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-primary mb-2 ml-2 font-weight-bold">submit</button>
+        </form>
+      </div>
+    </div>
+    <div>
+      <div class="content">
+        <ol>
+          <li><i class="far fa-star"></i>
+            <a class="large-link" href="https://visualgo.net">
+              Visualizing Algorithms</a>
+            <a class="small-link" href="#">
+              <small>(visualgo.net)</small></a>
+          </li>
+          <li><i class="far fa-star"></i>
+            <a class="large-link" href="https://www.rithmschool.com/blog/problem-solving-strategies-01">
+              Problem Solving with Rithm</a>
+            <a class="small-link" href="#">
+              <small>(rithmschool.com)</small></a>
+          </li>
+          <li><i class="far fa-star"></i>
+            <a class="large-link" href="https://www.amazon.com/Power-Up-Unlocking-Hidden-Mathematics-Video/dp/0691161518/">
+              Buy this book!</a>
+            <a class="small-link" href="#">
+              <small>(amazon.com)</small></a>
+          </li>
+          <li><i class="far fa-star"></i>
+            <a class="large-link" href="https://github.com/whiskey-the-dog">
+              Dogs on GitHub</a>
+            <a class="small-link" href="#">
+              <small>(github.com)</small></a>
+          </li>
+          <li><i class="far fa-star"></i>
+            <a class="large-link" href="https://www.rithmschool.com/blog/problem-solving-strategies-02">
+              MOAR PROBLEM SOLVING</a>
+            <a class="small-link" href="#">
+              <small>(rithmschool.com)</small></a>
+          </li>
+          <!-- <li><i class="fas fa-star"></i></li> -->
+        </ol>
+
+      </div>
+
+
+    </div>
+  </div>
+
+</body>
+
+</html>

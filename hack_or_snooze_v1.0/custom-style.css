@@ -1,0 +1,56 @@
+.navbar {
+  background-color: #e95420;
+  border-color: #d34615;
+}
+
+.navbar-brand {
+  color: #333;
+}
+
+.nav-link {
+  color: black;
+}
+
+.form-control:focus {
+  border-color: #f4ad94;
+  box-shadow: 0 0 0 0.2rem rgba(233, 84, 32, 0.25)
+}
+
+.btn-primary {
+  background-color: #e95420;
+  border-color: #e95420;
+}
+
+.btn-primary:hover {
+  background-color: #ce4414;
+  border-color: #c34113;
+}
+
+.container {
+  background-color: #f6f6ef;
+  padding: 0;
+}
+
+li {
+  color: #828282;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+a.large-link {
+  color: black;
+  text-decoration: none;
+}
+
+a.small-link {
+  color: #828282;
+}
+
+body {
+  font-size: 1rem;
+  font-family: "Ubuntu", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+.wrapper {
+  display: none;
+}
